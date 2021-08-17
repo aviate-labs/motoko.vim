@@ -1,2 +1,2 @@
-autocmd BufNewFile,BufRead *.mo setfiletype motoko
+autocmd BufNewFile,BufRead *.mo set filetype=motoko
 
