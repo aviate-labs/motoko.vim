@@ -9,13 +9,14 @@ module {
 
   /// Documentation comments start with /// followed by a space.
   public func getNat() : Nat {
-    let n0 = 12;
+    let n0 = 12 * 5;
     let n1 = 0x0F;
     let f0 = 0.;
     let f1 = 1.000_000_1;
     let f2 = 1e10;
     let f3 = 1.E-1;
     let f4 = 0x00.FF;
+    let f5 = 0xFFP01
     1_000_000;
   };
 };
