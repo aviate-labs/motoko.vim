@@ -1,4 +1,4 @@
-import "mo:base/Nat";
+import Nat "mo:base/Nat";
 
 module {
   // Single comment.
@@ -7,17 +7,17 @@ module {
    * TODO: x y z.
    */
 
+  /// @deprecated
   /// Documentation comments start with /// followed by a space.
   public func getNat() : Nat {
-    let n0 = 12 * 5;
-    let n1 = 0x0F;
-    let f0 = 0.;
-    let f1 = 1.000_000_1;
-    let f2 = 1e10;
-    let f3 = 1.E-1;
-    let f4 = 0x00.FF;
-    let f5 = 0xFFP01
+    let n0 = 12 * 5 + 0x0F;
+    let f0 = 0. + 1.000_000_1 / 1e10;
+    let f1 = 1.E-1 + 0x00.FF - 0xFFP01;
     1_000_000;
+  };
+
+  private func getText() : Text {
+    "___";
   };
 };
 
