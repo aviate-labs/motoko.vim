@@ -15,7 +15,6 @@ syn keyword moKeywords
   \ debug_show
   \ else
   \ flexible
-  \ false
   \ for
   \ func
   \ if
@@ -36,7 +35,6 @@ syn keyword moKeywords
   \ stable
   \ system
   \ switch
-  \ true
   \ try
   \ type
   \ var
@@ -57,14 +55,41 @@ hi def link moIdentifier Identifier
 
 syn match moNumber /\d\(_\?\d\)*/
 syn match moNumber /0x\x\(_\?\x\)*/
-syn match moNumber /\d\(_\?\d\)*\.\(\d\(_\?\d\)*\)\?/
-syn match moNumber /\d\(_\?\d\)*\(\.\(\d\(_\?\d\)*\)\?\)\?[eE]-\?\d\(_\?\d\)*/
-syn match moNumber /0x\x\(_\?\x\)*\.\(\x\(_\?\x\)*\)\?/
-syn match moNumber /0x\x\(_\?\x\)*\(\.\(\x\(_\?\x\)*\)\?\)\?[pP]-\?\x\(_\?\x\)*/
 hi def link moNumber Number
+syn match moFloat /\d\(_\?\d\)*\.\(\d\(_\?\d\)*\)\?/
+syn match moFloat /\d\(_\?\d\)*\(\.\(\d\(_\?\d\)*\)\?\)\?[eE]-\?\d\(_\?\d\)*/
+syn match moFloat /0x\x\(_\?\x\)*\.\(\x\(_\?\x\)*\)\?/
+syn match moFloat /0x\x\(_\?\x\)*\(\.\(\x\(_\?\x\)*\)\?\)\?[pP]-\?\x\(_\?\x\)*/
+hi def link moFloat Float
+
+syn keyword moBool true false
+hi def link moBool Boolean
 
 syn region moText start=+"+ end=+"+
 hi def link moText String
+
+syn keyword moPrelude
+  \ Any
+  \ None
+  \ Null
+  \ Bool
+  \ Nat
+  \ Nat8
+  \ Nat16
+  \ Nat32
+  \ Nat64
+  \ Int
+  \ Int8
+  \ Int16
+  \ Int32
+  \ Int64
+  \ Float
+  \ Char
+  \ Text
+  \ Blob
+  \ Error
+  \ Principal
+hi def link moPrelude Typedef 
 
 let b:current_syntax = "motoko"
 

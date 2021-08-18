@@ -17,6 +17,7 @@ module {
   };
 
   private func getText() : Text {
+    let b = true;
     "___";
   };
 };
